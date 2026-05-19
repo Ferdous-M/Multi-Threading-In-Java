@@ -2,8 +2,12 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-    MyThread t1 = new MyThread();
+        MyThread t1 = new MyThread();
 
-    t1.start();
+        //t1.start();
+
+        Thread t2 = new Thread(new MyTask());
+
+        t2.start();
     }
 }
