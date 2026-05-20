@@ -2,12 +2,14 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Thread t1 = new Thread(new MyTask());
-
-        t1.start();
+        System.out.println("Main thread is running: " + Thread.currentThread().getName());
+        MyThread t1 = new MyThread();
+        System.out.println("thread is running: " + Thread.currentThread().getName());
+        Thread.currentThread().setName("Ferdous-M");
+        System.out.println("thread is running: " + Thread.currentThread().getName());
 
         Thread t2 = new Thread(new MyTask2());
 
-        t2.start();
+       // t2.start();
     }
 }
