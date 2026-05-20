@@ -1,6 +1,6 @@
 public class joinDemo {
     public static void main(String[] args) throws Exception {
-        demoThread t1 = new demoThread();
+        MyThread3 t1 = new MyThread3();
         MyThread2 t2 = new MyThread2(t1);
         t1.start();
         t2.start();
