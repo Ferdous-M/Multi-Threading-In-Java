@@ -9,5 +9,10 @@ public class Main {
         System.out.println("thread is running: " + Thread.currentThread().getName());
         System.out.println("thread priority: " + Thread.currentThread().getPriority());
         System.out.println("t1 priority: " + t1.getPriority());
+
+        Thread.currentThread().setPriority(6);
+        System.out.println("thread priority has changed to: " + Thread.currentThread().getPriority());
+        System.out.println("t1 priority: " + t1.getPriority());
+
     }
 }
