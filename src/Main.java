@@ -7,9 +7,7 @@ public class Main {
         System.out.println("thread is running: " + t1.getName());
         Thread.currentThread().setName("Ferdous-M");
         System.out.println("thread is running: " + Thread.currentThread().getName());
-
-        Thread t2 = new Thread(new MyTask2());
-
-       // t2.start();
+        System.out.println("thread priority: " + Thread.currentThread().getPriority());
+        System.out.println("t1 priority: " + t1.getPriority());
     }
 }
