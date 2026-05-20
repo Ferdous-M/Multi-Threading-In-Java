@@ -14,7 +14,7 @@ public class demoThread extends Thread {
         }
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("child Thread is running: " + i + "  "+Thread.currentThread().getName());
+            System.out.println("child Thread1 is running: " + i + "  "+Thread.currentThread().getName());
         }
     }
 }
