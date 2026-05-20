@@ -1,13 +1,16 @@
 class Table {
 
-    synchronized void printTable() {
+    public void printTable() {
 
         for(int i = 1; i <= 5; i++) {
-            System.out.println("Hello from ferdous");
-            System.out.println("executed by: " + Thread.currentThread().getName());
+
+            synchronized (this) {
+                System.out.println("executed by: " + Thread.currentThread().getName());
+                System.out.println("Hello from ferdous");
+            }
 
             try {
-                Thread.sleep(500);
+                Thread.sleep(5000);
             } catch(Exception e) {
                     e.printStackTrace();
             }
