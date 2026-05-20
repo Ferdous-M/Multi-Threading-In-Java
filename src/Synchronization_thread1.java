@@ -1,4 +1,5 @@
-public class Synchronization_thread1 extends Thread {
+public class Synchronization_thread1 extends Thread
+{
     Table t;
 
     Synchronization_thread1(Table t) {
@@ -6,6 +7,6 @@ public class Synchronization_thread1 extends Thread {
     }
 
     public void run() {
-        t.printTable(5);
+        t.printTable();
     }
 }

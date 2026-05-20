@@ -5,7 +5,7 @@ public class Synchronization_thread2 extends Thread {
     }
 
     public void run() {
-        t.printTable(10);
+        t.printTable();
     }
 
 }
