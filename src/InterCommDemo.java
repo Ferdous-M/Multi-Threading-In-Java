@@ -1,29 +1,34 @@
-class thradDemo extends Thread {
+class ThreadDemo extends Thread {
+
     public int sum = 0;
 
     public void run() {
-       //public int sum = 0;
+
         synchronized (this) {
-            System.out.println("Thread is in synchronized block");
+
+            System.out.println("Child thread started");
 
             for (int i = 0; i < 5; i++) {
-                System.out.println("Thread is running: " + i);
-                sum = sum + i;
+
+                sum += i;
+
                 try {
-                    Thread.sleep(1000); // Sleep for 1 second
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    System.out.println("Thread interrupted");
+                    e.printStackTrace();
                 }
-                System.out.println("child thread giving notification");
-                this.notify();
             }
+
+            System.out.println("Child thread sending notification");
+
+            notify();
         }
     }
 }
 
 public class InterCommDemo {
     public static void main(String[] args) {
-        thradDemo t1 = new thradDemo();
+        ThreadDemo t1 = new ThreadDemo();
         t1.start();
 
         synchronized (t1) {
